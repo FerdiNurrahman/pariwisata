@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\landingPage\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.landing.beranda');
-});
+Route::get('', [LandingPageController::class, 'beranda']);
+Route::get('about', [LandingPageController::class, 'about']);
+Route::get('paketw', [LandingPageController::class, 'paketW']);
+Route::get('pemesanan', [LandingPageController::class, 'pemesanan']);
+Route::get('galery', [LandingPageController::class, 'galery']);
+    
+
+    Route::get('halLogin', function () {
+        return view('pages.landing.login');
+    });
