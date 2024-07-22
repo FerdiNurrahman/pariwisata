@@ -21,6 +21,9 @@ Route::get('pemesanan', [LandingPageController::class, 'pemesanan']);
 Route::get('galery', [LandingPageController::class, 'galery']);
     
 
+    // Route::get('halLogin', function () {
+    //     return view('pages.landing.login');
+    // });
     Route::get('halLogin', function () {
-        return view('pages.landing.login');
+        return view('pages.admin.admin');
     });
