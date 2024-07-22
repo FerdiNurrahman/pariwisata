@@ -10,11 +10,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="/" class="nav-item nav-link active">BERANDA</a>
-                <a href="about" class="nav-item nav-link">ABOUT</a>
-                <a href="paketW" class="nav-item nav-link">PAKET WISATA</a>
-                <a href="galery" class="nav-item nav-link">GALERY</a>
-                <a href="pemesanan" class="nav-item nav-link">PEMESANAN</a>
+                <a href="{{ url('/') }}" class="nav-item nav-link {{ $page == 'beranda' ? 'active' : '' }}">BERANDA</a>
+                <a href="{{ url('/about') }}" class="nav-item nav-link {{ $page == 'about' ? 'active' : '' }}">ABOUT</a>
+                <a href="{{ url('/paketW') }}" class="nav-item nav-link {{ $page == 'paketW' ? 'active' : '' }}">PAKET WISATA</a>
+                <a href="{{ url('/galery') }}" class="nav-item nav-link {{ $page == 'galery' ? 'active' : '' }}">GALERY</a>
+                <a href="{{ url('/pemesanan') }}" class="nav-item nav-link {{ $page == 'pemesanan' ? 'active' : '' }}">PEMESANAN</a>                
             </div>
             <a href="halLogin" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Login</a>
 

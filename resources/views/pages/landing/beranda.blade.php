@@ -1,6 +1,47 @@
 @extends('layout.landing')
 
 @section('content')
+            <!-- Carousel Start -->
+            <div class="carousel-header">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($kegiatan as $index => $item)
+                                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                        <img src="template/img/landing_page/{{ $item->gambar }}" class="img-fluid" alt="Image">
+                                        <div class="carousel-caption">
+                                            <div class="p-3" style="max-width: 900px;">
+                                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">{{ $item->namaKegiatan }}</h4>
+                                                <h1 class="display-2 text-capitalize text-white mb-4">Pantai Batakan</h1>
+                                                <p class="mb-5 fs-5">{{ $item->teks }}</p>
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>                        
+            </div>
+            <!-- Carousel End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
         <!-- About Start -->
         <div class="container-fluid about py-5">
             <div class="container py-5">

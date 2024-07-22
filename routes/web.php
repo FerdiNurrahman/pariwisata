@@ -14,9 +14,9 @@ use App\Http\Controllers\landingPage\LandingPageController;
 |
 */
 
-Route::get('', [LandingPageController::class, 'beranda']);
+Route::get('/', [LandingPageController::class, 'beranda']);
 Route::get('about', [LandingPageController::class, 'about']);
-Route::get('paketw', [LandingPageController::class, 'paketW']);
+Route::get('paketW', [LandingPageController::class, 'paketW']);
 Route::get('pemesanan', [LandingPageController::class, 'pemesanan']);
 Route::get('galery', [LandingPageController::class, 'galery']);
     
